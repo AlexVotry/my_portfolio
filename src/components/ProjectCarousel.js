@@ -11,7 +11,6 @@ class ProjectCarousel extends React.Component {
   
   async getProjects() {
     const res = await axios.get('http://res.cloudinary.com/aleximages/image/list/projects.json');
-    console.log(res.data.resources);
     this.setState({ gallery: res.data.resources });
   }
 

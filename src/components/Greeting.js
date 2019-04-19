@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import anime from 'animejs';
 import { webDev, createWebDev } from '../utils/webDev';
 import { myName, nameSvg } from '../utils/myName';
 
