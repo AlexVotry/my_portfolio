@@ -2,7 +2,7 @@
   "name": "my_portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/AlexVotry/my_portfolio/settings",
+  "homepage": "https://github.com/AlexVotry/my_portfolio",
   "dependencies": {
     "animejs": "^3.0.1",
     "axios": "^0.18.0",
