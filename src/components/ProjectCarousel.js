@@ -5,6 +5,7 @@ import { Image, Transformation, CloudinaryContext } from 'cloudinary-react';
 import "../slickSlider/slick.css";
 import "../slickSlider/slick-theme.css";
 import { sliderSettings } from '../slickSlider/sliderSettings';
+import { Link } from 'react-router-dom';
 
 class ProjectCarousel extends React.Component {
   state = { gallery: [] };
@@ -20,15 +21,16 @@ class ProjectCarousel extends React.Component {
 
   renderImages() {
     const { gallery } = this.state;
-
+    console.log('gallery:', gallery);
+    
    return (
     gallery.map((data, index) => {
       return (
         <CloudinaryContext key={data.public_id} cloudName="aleximages">
           <div className="imageBackground">
-          <Image className="productImage" publicId={data.public_id} format="png">
+          <Link to="/video"><Image className="productImage" publicId={data.public_id} format="png">
             <Transformation crop="pad" width="150" height="150" />
-          </Image>
+            </Image></Link>
         </div>
       </CloudinaryContext>
       );
