@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {BrowserRouter, Route} from 'react-router-dom';
-import './App.scss';
+// import './App.scss';
 import Header from './Header';
 import ProjectCarousel2 from './ProjectCarousel2';
 import Greeting from './Greeting';

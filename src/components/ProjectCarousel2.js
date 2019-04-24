@@ -31,7 +31,7 @@ const ProjectCarousel2 = () => {
             <div className="projectBlocks">
               <div className="title">{image.context.custom.alt}</div>
               <Image className="projectImage" publicId={image.public_id} format="png">
-                <Transformation crop="pad" width="150" height="150" />
+                <Transformation crop="pad" width="150" height="100" />
               </Image>
               <div className="links">
                 <a href={image.context.custom.github}><img className="github" src={github} alt="gitHub" /></a>
