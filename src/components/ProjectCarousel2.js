@@ -2,12 +2,9 @@ import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import axios from 'axios';
 import { Image, Transformation, CloudinaryContext } from 'cloudinary-react';
-import "../slickSlider/slick.css";
-import "../slickSlider/slick-theme.css";
-import { sliderSettings } from '../slickSlider/sliderSettings';
+import { sliderSettings } from '../utils/sliderSettings';
 import ModalVideo from 'react-modal-video'
-import github from '../assets/github.svg';
-import playButton from '../assets/playButton.svg';
+import LinkButtons from "./LinkButtons";
 
 const ProjectCarousel2 = () => {
   const [gallery, setGallery] = useState([]);
@@ -16,6 +13,10 @@ const ProjectCarousel2 = () => {
   const getProjects =  async () => {
     const res = await axios.get('http://res.cloudinary.com/aleximages/image/list/projects.json');
     setGallery(res.data.resources);
+  }
+
+  const onClick = (id) => {
+    setVideoId(id);
   }
   
   useEffect(() => {
@@ -33,10 +34,7 @@ const ProjectCarousel2 = () => {
               <Image className="projectImage" publicId={image.public_id} format="png">
                 <Transformation crop="pad" width="150" height="100" />
               </Image>
-              <div className="links">
-                <a href={image.context.custom.github}><img className="github" src={github} alt="gitHub" /></a>
-                <button onClick={() => setVideoId(image.context.custom.videoId)}><img className="playButton" src={playButton} alt="play button"/></button>
-              </div>
+              <LinkButtons image={image} onClick={onClick}/>
             </div>
           </CloudinaryContext>
         );
@@ -58,9 +56,7 @@ const ProjectCarousel2 = () => {
 
   return (
     <div className="carousel">
-      <div className="videoModal">
       {renderModal(videoId)}
-      </div>
       <Slider {...sliderSettings}>
         {renderImages()}
       </Slider>

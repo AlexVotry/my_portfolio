@@ -31,6 +31,11 @@ class ProjectCarousel extends React.Component {
           <Link to="/video"><Image className="productImage" publicId={data.public_id} format="png">
             <Transformation crop="pad" width="150" height="150" />
             </Image></Link>
+
+            {/* <div className="links">
+              <a href={image.context.custom.github}><img className="github" src={github} alt="gitHub" /></a>
+              <button onClick={() => setVideoId(image.context.custom.videoId)}><img className="playButton" src={playButton} alt="play button" /></button>
+            </div> */}
         </div>
       </CloudinaryContext>
       );

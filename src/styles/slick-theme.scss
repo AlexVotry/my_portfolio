@@ -52,21 +52,21 @@ $slick-opacity-not-active: 0.25 !default;
     cursor: pointer;
     background: transparent;
     color: transparent;
-    top: 20%;
+    top: 35%;
     -webkit-transform: translate(0, -50%);
     -ms-transform: translate(0, -50%);
     transform: translate(0, -50%);
     padding: 0;
     border: none;
     outline: none;
-    &:hover, &:focus {
-        outline: none;
-        background: transparent;
-        color: transparent;
-        &:before {
-            opacity: $slick-opacity-on-hover;
-        }
-    }
+    // &:hover, &:focus {
+    //     outline: none;
+    //     background: transparent;
+    //     color: transparent;
+    //     &:before {
+    //         opacity: $slick-opacity-on-hover;
+    //     }
+    // }
     &.slick-disabled:before {
         opacity: $slick-opacity-not-active;
     }

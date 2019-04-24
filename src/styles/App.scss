@@ -29,7 +29,7 @@
   .carousel {
     z-index: 5;
     grid-column: 7 / 12;
-    grid-row: 8 / 12;
+    grid-row: 11 / 13;
     margin: auto 0;
     .projectBlocks {
       border-radius: 25px;
@@ -74,64 +74,21 @@
   }
 
   .carouselBar {
+    margin-top: 2%;
     z-index: 1;
-    height: 8vh;
+    height: 6vh;
     grid-column: 2 / 13;
-    grid-row: 9 / 11;
+    grid-row: 11 / 13;
     background: #6141ff;
     text-align: left;
     padding-left: 4rem;
     box-shadow: 3px 3px 3px #282c34;
     .text {
-      line-height: 8vh;
+      line-height: 6vh;
     }
   }
-  .footer {
-    margin-top: 2%;
-    grid-column: 1 / 13;
-    grid-row: 12/ 13;
-  }
 }
 
-.ml1 {
-  font-weight: 900;
-  font-size: 3.5em;
-}
-
-.ml1 .letter {
-  display: inline-block;
-  line-height: .5em;
-}
-
-.ml1 .text-wrapper {
-  position: relative;
-  display: inline-block;
-  padding-top: 0.1em;
-  padding-right: 0.05em;
-  padding-bottom: 0.15em;
-}
-
-.ml1 .line {
-  opacity: 0;
-  position: absolute;
-  left: 0;
-  height: 3px;
-  width: 100%;
-  background-color: #000;
-  transform-origin: 0 0;
-}
-
-.ml1 .line1 { top: 0; }
-.ml1 .line2 { bottom: 0; }
-
-// line drawing anime
-anime-demo {
-  position: relative;
-}
-
-svg {
-   padding: 10px;
-}
 
 
 
