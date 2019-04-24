@@ -1,53 +1,56 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import axios from 'axios';
 import { Image, Transformation, CloudinaryContext } from 'cloudinary-react';
-import "../slickSlider/slick.css";
-import "../slickSlider/slick-theme.css";
-import { sliderSettings } from '../slickSlider/sliderSettings';
-import { Link } from 'react-router-dom';
+import { sliderSettings } from '../utils/sliderSettings';
+import LinkButtons from "./LinkButtons";
+import Videos from './Videos';
 
-class ProjectCarousel extends React.Component {
-  state = { gallery: [] };
-  
-  async getProjects() {
+const ProjectCarousel = () => {
+  const [gallery, setGallery] = useState([]);
+  const [videoId, setVideoId] = useState(undefined);
+
+  const getProjects =  async () => {
     const res = await axios.get('http://res.cloudinary.com/aleximages/image/list/projects.json');
-    this.setState({ gallery: res.data.resources });
+    setGallery(res.data.resources);
   }
 
-  componentDidMount() {
-    this.getProjects();
+  const getVideoId = (id) => {
+    setVideoId(id);
   }
 
-  renderImages() {
-    const { gallery } = this.state;
-    console.log('gallery:', gallery);
-    
-   return (
-    gallery.map((data, index) => {
-      return (
-        <CloudinaryContext key={data.public_id} cloudName="aleximages">
-          <div className="imageBackground">
-          <Link to="/video"><Image className="productImage" publicId={data.public_id} format="png">
-            <Transformation crop="pad" width="150" height="150" />
-            </Image></Link>
-        </div>
-      </CloudinaryContext>
-      );
-    })
-   );
-  }
-  render() {
-    var settings = sliderSettings;
-
+  useEffect(() => {
+    getProjects();
+  }, [videoId]);
+  
+  const renderImages = () =>{
+    console.log('gallery:',gallery);
     return (
-        <div className="carousel">
-          <Slider {...settings}>
-            {this.renderImages()}
-          </Slider>
-        </div>
+      gallery.map(image => {
+        return (
+          <CloudinaryContext key={image.public_id} cloudName="aleximages">
+            <div className="projectBlocks">
+              <div className="title">{image.context.custom.alt}</div>
+              <Image className="projectImage" publicId={image.public_id} format="png">
+                <Transformation crop="pad" width="150" height="100" />
+              </Image>
+              <LinkButtons image={image} onClick={getVideoId}/>
+            </div>
+          </CloudinaryContext>
+        );
+      })
     );
   }
+
+  return (
+    <div className="carousel">
+      <Videos closeModal={getVideoId} videoId={videoId} />
+      <Slider {...sliderSettings}>
+        {renderImages()}
+      </Slider>
+    </div>
+  );
+
 }
 
-export default ProjectCarousel;
+  export default ProjectCarousel;

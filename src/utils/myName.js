@@ -4,7 +4,7 @@ import anime from 'animejs';
 
 export const myName = () => {
 
-  const letterTime = 2000;
+  const letterTime = 3000;
 
   anime({
     targets: "path",
@@ -21,7 +21,7 @@ export const myName = () => {
         i;
 
       for (i = 0; i < letters.length; ++i) {
-        letters[i].setAttribute("stroke", "black");
+        letters[i].setAttribute("stroke", "#6141ff");
         letters[i].setAttribute("fill", "none");
       }
     },
