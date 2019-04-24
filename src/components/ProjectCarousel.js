@@ -3,10 +3,10 @@ import Slider from "react-slick";
 import axios from 'axios';
 import { Image, Transformation, CloudinaryContext } from 'cloudinary-react';
 import { sliderSettings } from '../utils/sliderSettings';
-import ModalVideo from 'react-modal-video'
 import LinkButtons from "./LinkButtons";
+import Videos from './Videos';
 
-const ProjectCarousel2 = () => {
+const ProjectCarousel = () => {
   const [gallery, setGallery] = useState([]);
   const [videoId, setVideoId] = useState(undefined);
 
@@ -15,10 +15,10 @@ const ProjectCarousel2 = () => {
     setGallery(res.data.resources);
   }
 
-  const onClick = (id) => {
+  const getVideoId = (id) => {
     setVideoId(id);
   }
-  
+
   useEffect(() => {
     getProjects();
   }, [videoId]);
@@ -34,7 +34,7 @@ const ProjectCarousel2 = () => {
               <Image className="projectImage" publicId={image.public_id} format="png">
                 <Transformation crop="pad" width="150" height="100" />
               </Image>
-              <LinkButtons image={image} onClick={onClick}/>
+              <LinkButtons image={image} onClick={getVideoId}/>
             </div>
           </CloudinaryContext>
         );
@@ -42,21 +42,9 @@ const ProjectCarousel2 = () => {
     );
   }
 
-  const renderModal = (videoId) => {
-    if (videoId === undefined) {
-      return;
-    } else {
-      return (
-        <div className="videoModal">
-          <ModalVideo channel='vimeo' isOpen='true' videoId={videoId} onClose={() =>setVideoId(undefined)} />
-        </div>
-      )
-    }
-  }
-
   return (
     <div className="carousel">
-      {renderModal(videoId)}
+      <Videos closeModal={getVideoId} videoId={videoId} />
       <Slider {...sliderSettings}>
         {renderImages()}
       </Slider>
@@ -65,4 +53,4 @@ const ProjectCarousel2 = () => {
 
 }
 
-  export default ProjectCarousel2;
+  export default ProjectCarousel;
