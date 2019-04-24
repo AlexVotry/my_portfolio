@@ -23,7 +23,7 @@
     line-height: 0;
 
     position: absolute;
-    top: 50%;
+    top: 30%;
 
     display: block;
 
@@ -68,10 +68,11 @@
 {
     font-family: 'slick';
     font-size: 20px;
+    font-weight: bolder;
     line-height: 1;
 
     opacity: .75;
-    color: black;
+    color: #ffb041;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
