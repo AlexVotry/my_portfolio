@@ -1,6 +1,9 @@
 .ml1 {
   font-weight: 900;
   font-size: 3.5em;
+  @include media($vp-s-down) {
+    font-size: 2em;
+  };
 }
 
 .ml1 .letter {
@@ -31,7 +34,7 @@
 
 // line drawing anime
 .myName {
-  
+
   #anime-signature {
     position: relative;
   }

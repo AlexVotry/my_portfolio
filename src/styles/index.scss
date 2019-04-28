@@ -1,3 +1,9 @@
+@import url('https://use.typekit.net/eee7teq.css');
+
+@import '../mixins/_media.scss';
+@import '../functions/_ems.scss';
+
+@import './_styleguide.scss';
 @import './App.scss';
 @import './Greeting.scss';
 @import './slick-theme.scss';

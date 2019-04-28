@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { webDev, createWebDev } from '../utils/webDev';
-import { myName, nameSvg } from '../utils/myName';
+import { myName } from '../utils/myName';
+import MyName from './MyName';
 
 class Greeting extends Component {
 
@@ -11,19 +12,15 @@ class Greeting extends Component {
   createWebDev() {
     return createWebDev();
   }
-  createMyName() {
-    return nameSvg();
-  }
 
   anime = async () => {
     await webDev();
-    myName();
   };
 
   render() {
     return (
       <div className="myName">
-        {this.createMyName()}
+        <MyName />
         <h1 className="ml1">
           <span className="text-wrapper">
             <span className="line line1"></span>
