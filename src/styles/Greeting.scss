@@ -1,6 +1,9 @@
 .ml1 {
   font-weight: 900;
   font-size: 3.5em;
+  @include media($vp-s-down) {
+    font-size: 2em;
+  };
 }
 
 .ml1 .letter {
@@ -30,8 +33,11 @@
 .ml1 .line2 { bottom: 0; }
 
 // line drawing anime
-#anime-signature {
-  position: relative;
+.myName {
+
+  #anime-signature {
+    position: relative;
+  }
 }
 
 svg {

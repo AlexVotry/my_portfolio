@@ -17,13 +17,13 @@ export const sliderSettings = {
       }
     },
     {
-      breakpoint: 1300,
+      breakpoint: 1000,
       settings: {
         slidesToShow: 2
       }
     },
     {
-      breakpoint: 885,
+      breakpoint: 700,
       settings: {
         slidesToShow: 1
       }

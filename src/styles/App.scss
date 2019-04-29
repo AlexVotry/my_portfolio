@@ -8,7 +8,7 @@
   grid-template-columns: repeat(13, 8vw);
   grid-template-rows: repeat(13, 8vh);
   .App-header {
-    background-color: #ffb041;
+    background-color: $accent-color;
     min-height: 10vh;
     display: inline-block;
     font-size: calc(10px + 2vmin);
@@ -33,13 +33,14 @@
     margin: auto 0;
     .projectBlocks {
       border-radius: 25px;
-      background-color: #dfff41;
-      box-shadow: 3px 3px 10px #282c34;
+      background-color: $third-color;
+      box-shadow: 3px 3px 10px black;
       margin-right: 10px;
       display: flex;
       flex-direction: column;
       margin: 3%;
-      width: 90%;
+      // width: 80%;
+
       .title {
         text-align: center;
       }
@@ -49,16 +50,16 @@
       .links {
         margin-top: 2%;
         display: flex;
-        justify-content: space-around; 
+        justify-content: space-around;
         .github {
           border-radius: 50%;
           &:hover {
-            box-shadow:-0 0 10px red;
+            box-shadow:-0 0 10px $accent-color;
           }
         }
         button {
           background: none;
-          border: none; 
+          border: none;
           cursor: pointer;
           border-radius: 50%;
           outline: none;
@@ -75,23 +76,20 @@
   }
 
   .carouselBar {
-    margin-top: 3.5%;
+    margin-top: em(55);
     z-index: 1;
     height: 6vh;
     grid-column: 2 / 13;
     grid-row: 10 / 13;
-    background: #6141ff;
+    background: $primary-color;
     text-align: left;
     padding-left: 4rem;
     box-shadow: 3px 3px 3px #282c34;
+    // @include media($vp-l-up) {
+    //   margin-top: rem(18);
+    // }
     .text {
       line-height: 6vh;
     }
   }
 }
-
-
-
-
-
-
