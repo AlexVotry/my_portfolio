@@ -2,7 +2,7 @@
 
 .App {
   // background-image: url('../assets/alexLogo.png');
-  height: 100vh;
+  height: 90vh;
   width: 100vw;
   display: grid;
   grid-template-columns: repeat(13, 8vw);
@@ -29,7 +29,7 @@
   .carousel {
     z-index: 5;
     grid-column: 7 / 12;
-    grid-row: 11 / 13;
+    grid-row: 10 / 13;
     margin: auto 0;
     .projectBlocks {
       border-radius: 25px;
@@ -39,6 +39,7 @@
       display: flex;
       flex-direction: column;
       margin: 3%;
+      width: 90%;
       .title {
         text-align: center;
       }
@@ -74,11 +75,11 @@
   }
 
   .carouselBar {
-    margin-top: 2%;
+    margin-top: 3.5%;
     z-index: 1;
     height: 6vh;
     grid-column: 2 / 13;
-    grid-row: 11 / 13;
+    grid-row: 10 / 13;
     background: #6141ff;
     text-align: left;
     padding-left: 4rem;
