@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import logo from '../assets/alexLogo.png';
 import { Link } from 'react-router-dom';
 
-const Header = () => {
+const Navbar = () => {
   const [homeClass, setHomeClass] = useState('active');
   const [listClass, setListClass] = useState('');
 
@@ -17,7 +17,7 @@ const Header = () => {
   }
 
   return (
-    <div className="App-header">
+    <div className="navbar">
       <ul className="pageLinks">
         <li><Link to="/" onClick={() => changeClass('home')} className={homeClass}>Home</Link></li>
         <li> <Link to="/list" onClick={() => changeClass('list')} className={listClass}>List of Projects</Link></li>
@@ -27,4 +27,4 @@ const Header = () => {
   );
 }
 
-export default Header;
+export default Navbar;

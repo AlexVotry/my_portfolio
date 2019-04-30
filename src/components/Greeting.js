@@ -18,9 +18,9 @@ class Greeting extends Component {
 
   render() {
     return (
-      <div className="myName">
+      <div className="greeting">
         <MyName />
-        <h1 className="ml1">
+        <h1 className="webdev">
           <span className="text-wrapper">
             <span className="line line1"></span>
             {this.createWebDev()}
