@@ -23,14 +23,13 @@ const ProjectCarousel = () => {
     getProjects();
   }, [videoId]);
   
-  const renderImages = () =>{
-    console.log('gallery:',gallery);
+  const renderImages = () => {
     return (
       gallery.map(image => {
         return (
           <CloudinaryContext key={image.public_id} cloudName="aleximages">
             <div className="projectBlocks">
-              <div className="title">{image.context.custom.alt}</div>
+              <div className="title">{image.context.custom.caption}</div>
               <Image className="projectImage" publicId={image.public_id} format="png">
                 <Transformation crop="pad" width="150" height="100" />
               </Image>

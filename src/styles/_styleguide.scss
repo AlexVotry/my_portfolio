@@ -10,51 +10,6 @@ $spacing-l:   em(90);
 $spacing-xl:  em(120);
 $spacing-xxl: em(190);
 
-/*  Responsive Spacing Map
-
-    This sets the vertical spacing
-    rules for the site.
----------------------------------- */
-
-$spacing-map: (
-  spacing-xxs: (
-    desktop: $spacing-xxs,
-    tablet:  em(10),
-    mobile:  em(10)
-  ),
-  spacing-xs: (
-    desktop: $spacing-xs,
-    tablet:  em(15),
-    mobile:  em(15)
-  ),
-  spacing-s: (
-    desktop: $spacing-s,
-    tablet:  em(25),
-    mobile:  em(20)
-  ),
-  spacing-m: (
-    desktop: $spacing-m,
-    tablet:  em(55),
-    mobile:  em(45)
-  ),
-  spacing-l: (
-    desktop: $spacing-l,
-    tablet:  em(70),
-    mobile:  em(60)
-  ),
-  spacing-xl: (
-    desktop: $spacing-xl,
-    tablet:  em(110),
-    mobile:  em(100)
-  ),
-  spacing-xxl: (
-    desktop: $spacing-xxl,
-    tablet:  em(150),
-    mobile:  em(120)
-  )
-);
-
-
 /* ----------------------------------
     Break Point Settings
 ---------------------------------- */
