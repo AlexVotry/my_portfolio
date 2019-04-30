@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import anime from 'animejs';
 
 
@@ -15,7 +14,7 @@ export const myName = () => {
       return letterTime * i;
     },
     direction: 'alternate',
-    loop: true,
+    loop: 2.5,
     begin: function (anim) {
       let letters = document.querySelectorAll("path"),
         i;

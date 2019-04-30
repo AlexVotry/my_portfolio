@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { webDev, createWebDev } from '../utils/webDev';
-import { myName } from '../utils/myName';
 import MyName from './MyName';
 
 class Greeting extends Component {

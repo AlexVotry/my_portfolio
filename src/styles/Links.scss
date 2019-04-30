@@ -1,0 +1,25 @@
+      .links {
+        margin-top: 2%;
+        display: flex;
+        justify-content: space-around;
+        .github {
+          border-radius: 50%;
+          &:hover {
+            box-shadow:-0 0 10px $accent-color;
+          }
+        }
+        button {
+          background: none;
+          border: none;
+          cursor: pointer;
+          border-radius: 50%;
+          outline: none;
+          .playButton {
+            width: 90%;
+            border-radius: 50%;
+            &:hover {
+              box-shadow:-0 0 10px $accent-color;
+            }
+          }
+        }
+      }

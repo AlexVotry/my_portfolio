@@ -1,0 +1,32 @@
+  .App-header {
+    background-color: $accent-color;
+    min-height: 8vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: calc(10px + 2vmin);
+    width: 100vw;
+    .logo {
+      max-height: 8vh;
+      margin-left: 15%;
+    }
+    .pageLinks {
+      list-style-type: none;
+      // background-color:$accent-color;
+      width: 30%;
+      display: inline;
+      margin: auto 10px;
+      li {
+        display: inline;
+        a {
+          color: white;
+          text-align: center;
+          padding: 0 16px;
+          text-decoration: none;
+          &:hover {
+            color: $primary-color;
+          }
+        } 
+      }
+    }
+  }
