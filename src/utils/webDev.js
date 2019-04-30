@@ -4,7 +4,7 @@ import anime from 'animejs';
 export const webDev = () => {
   anime.timeline({ loop: false })
     .add({
-      targets: '.ml1 .letter',
+      targets: '.webdev .letter',
       scale: [0.3, 1],
       opacity: [0, 1],
       translateZ: 0,
@@ -14,7 +14,7 @@ export const webDev = () => {
         return 600 * (i + 1)
       }
     }).add({
-      targets: '.ml1 .line',
+      targets: '.webdev .line',
       scaleX: [0, 1],
       opacity: [0.5, 1],
       easing: "easeOutExpo",

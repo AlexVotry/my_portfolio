@@ -2,10 +2,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  .title {
-    text-align: center;
-    margin: $spacing-xs $spacing-s;
-  }
   .projectWrapper {
     display: flex;
     background-color: $third-color;
@@ -17,6 +13,15 @@
       display: flex;
       flex-direction: column;
       margin: $spacing-xs;
+      .titleWrapper {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        .title {
+          text-align: center;
+          margin: $spacing-xs $spacing-s;
+        }
+      }
       .content {
         display: flex;
         .projectImage {

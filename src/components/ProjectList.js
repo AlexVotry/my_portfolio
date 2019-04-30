@@ -36,14 +36,16 @@ const ProjectList = () => {
         return (
           <CloudinaryContext className="projectWrapper" key={image.public_id} cloudName="aleximages">
             <div className="projects">
-              <h3 className="title">{image.context.custom.caption}</h3>
+              <div className="titleWrapper">
+                <LinkButtons image={image} onClick={getVideoId} />
+                <h3 className="title">{image.context.custom.caption}</h3>
+              </div>
               <div className="content">
                 <Image className="projectImage" publicId={image.public_id} format="png">
                   <Transformation crop="pad" width="300" height="200" />
                 </Image>
                 {renderText(image.context.custom.content)}
               </div>
-              <LinkButtons image={image} onClick={getVideoId} />
             </div>
           </CloudinaryContext>
         );
