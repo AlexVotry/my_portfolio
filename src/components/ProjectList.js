@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Image, Transformation, CloudinaryContext } from 'cloudinary-react';
 import LinkButtons from "./LinkButtons";
 import Videos from './Videos';
+import Banner from './Banner';
 
 const ProjectList = () => {
   const [gallery, setGallery] = useState([]);
@@ -41,9 +42,11 @@ const ProjectList = () => {
                 <h3 className="title">{image.context.custom.caption}</h3>
               </div>
               <div className="content">
-                <Image className="projectImage" publicId={image.public_id} format="png">
-                  <Transformation crop="pad" width="300" height="200" />
-                </Image>
+                <div className="projectImage">
+                  <Image publicId={image.public_id} format="png">
+                    <Transformation crop="pad" width="300" height="200" />
+                  </Image>
+                </div>
                 {renderText(image.context.custom.content)}
               </div>
             </div>
@@ -54,7 +57,8 @@ const ProjectList = () => {
   }
 
   return (
-    <div className="carousel">
+    <div className="projectList">
+      <Banner />
       <Videos closeModal={getVideoId} videoId={videoId} />
       <div className="listWrapper">
       {renderImages()}

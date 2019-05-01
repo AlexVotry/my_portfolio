@@ -80,12 +80,6 @@ $vp-full-up:     min-width $bp-full-up;
 $primary-color: #6141ff;
 $accent-color: #ffb041;
 $third-color: #dfff41;
-
-/*  Light Italic ---- */
-
-@mixin brand-headline-font-light-italic {
-  font-family: 'rift', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-  font-weight: 300;
-  font-style: italic;
-  text-transform: uppercase;
-}
+$ribbon-light: #ba89b6;
+$ribbon-dark: #986794;
+$ribbon-border: #804f7c;
