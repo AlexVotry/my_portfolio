@@ -20,7 +20,7 @@ export const myName = () => {
         i;
 
       for (i = 0; i < letters.length; ++i) {
-        letters[i].setAttribute("stroke", "#6141ff");
+        letters[i].setAttribute("stroke", "#709c49");
         letters[i].setAttribute("fill", "none");
       }
     },

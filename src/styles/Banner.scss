@@ -8,7 +8,7 @@
  font-size: em(16);
  width: 50%;
  position: relative;
- background: $ribbon-light;
+ background-color: #1A5680;
  color: #fff;
  text-align: center;
  padding: 1em 2em; 
@@ -19,7 +19,7 @@
  position: absolute;
  display: block;
  bottom: -1em;
- border: 1.5em solid $ribbon-dark;
+ border: 1.5em solid #184b78;
  z-index: -1;
 }
 .ribbon:before {
@@ -37,7 +37,7 @@
  position: absolute;
  display: block;
  border-style: solid;
- border-color: $ribbon-border transparent transparent transparent;
+ border-color: #0f2d47 transparent transparent transparent;
  bottom: -1em;
 }
 .ribbon .ribbon-content:before {

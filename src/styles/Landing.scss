@@ -1,7 +1,6 @@
 @import 'node_modules/react-modal-video/scss/modal-video.scss';
 
 .container {
-  // background-image: url('../assets/alexLogo.png');
   height: 90vh;
   width: 100vw;
   display: grid;
@@ -15,6 +14,15 @@
     @include media($vp-s-down) {
       grid-row: 2 / 4;
     };
+  }
+
+  .bike {
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;
+    img {
+      border: 8px solid $bg-color;
+      width: 100%;
+    }
   }
 
   .carousel {
@@ -35,6 +43,7 @@
       margin: 3%;
       .title {
         text-align: center;
+        font-weight: bold;
       }
       .projectImage {
         margin: 0 auto;

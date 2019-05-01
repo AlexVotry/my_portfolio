@@ -33,11 +33,12 @@
 .webdev .line2 { bottom: 0; }
 
 // line drawing anime
-.myName {
   #anime-signature {
     position: relative;
+     @include media($vp-m-down) {
+      margin-left: $spacing-l;
+    };
   }
-}
 
 svg {
    padding: 10px;
