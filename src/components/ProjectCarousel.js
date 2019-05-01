@@ -11,7 +11,7 @@ const ProjectCarousel = () => {
   const [videoId, setVideoId] = useState(undefined);
 
   const getProjects =  async () => {
-    const res = await axios.get('http://res.cloudinary.com/aleximages/image/list/projects.json');
+    const res = await axios.get('https://res.cloudinary.com/aleximages/image/list/projects.json');
     setGallery(res.data.resources);
   }
 
