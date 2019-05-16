@@ -30,17 +30,17 @@ export const myName = () => {
 export const resizeSvg = (size) => {
   const d = {};
   if ( size <= 435) {
-    d.w = '150';
-    d.h = '150';
+    d.w = '100';
+    d.h = '100';
     d.vb = '0 0 600 600';
   } else if ( size < 830 & size > 435) {
     d.w = '200';
     d.h = '100';
     d.vb = '100 0 200 300';
   } else {
-    d.w = '400';
-    d.h = '200';
-    d.vb = '0 0 400 300';
+    d.w = '200';
+    d.h = '100';
+    d.vb = '100 0 200 300';
   }
   return d;
 }

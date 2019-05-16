@@ -22,14 +22,17 @@ const ProjectCarousel = () => {
   useEffect(() => {
     getProjects();
   }, [videoId]);
-  
+
   const renderImages = () => {
     return (
       gallery.map(image => {
+        const title = image.context.custom.caption;
+        let titleClass = title.length < 16 ? 'title' : 'title-small';
+
         return (
           <CloudinaryContext key={image.public_id} cloudName="aleximages">
             <div className="projectBlocks">
-              <div className="title">{image.context.custom.caption}</div>
+              <div className={titleClass}>{title}</div>
               <Image className="projectImage" publicId={image.public_id} format="png">
                 <Transformation crop="pad" width="150" height="100" />
               </Image>

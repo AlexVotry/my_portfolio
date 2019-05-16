@@ -1,8 +1,8 @@
 @import 'node_modules/react-modal-video/scss/modal-video.scss';
 
 .container {
-  height: 90vh;
-  width: 100vw;
+  height: $site-width-d;
+  width: $site-width-d;
   display: grid;
   grid-template-columns: repeat(13, 8vw);
   grid-template-rows: repeat(13, 8vh);
@@ -37,13 +37,19 @@
       border-radius: 25px;
       background-color: $third-color;
       box-shadow: 3px 3px 10px black;
-      // margin-right: 10px;
+      max-width: 150px;
+      max-height: 150px;
       display: flex;
       flex-direction: column;
-      margin: 3%;
+      margin: $spacing-s 3%;
       .title {
         text-align: center;
         font-weight: bold;
+      }
+      .title-small {
+        text-align: center;
+        font-weight: bold;
+        font-size: .8em;
       }
       .projectImage {
         margin: 0 auto;
@@ -78,25 +84,25 @@
 
   .boldProjects {
     grid-column: 3 / 5;
-    grid-row: 8 / 11;
+    grid-row: 9 / 11;
     font-size: em(50);
     color: $primary-color;
     font-style: italic;
-    margin-top: $spacing-xs;
+    // margin-top: $spacing-xs;
     @include media($vp-s-down) {
       grid-row: 7 / 8;
       font-size: em(30);
-      margin-top: $spacing-xs;
+      margin-top: $spacing-s;
     }
     @include media($vp-s-to-m) {
       font-size: em(40);
       margin-top: $spacing-xxs;
     }
   }
-  
+
   .listLink {
     grid-column: 3 / 5;
-    grid-row: 9 / 10;
+    grid-row: 10 / 11;
     margin-top: $spacing-s;
     @include media($vp-s-down) {
        grid-column: 3 / 10;
