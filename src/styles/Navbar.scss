@@ -16,6 +16,11 @@
       width: 30%;
       display: inline;
       margin: auto 10px;
+      .active {
+        a {
+          color: $bg-color;
+        }
+      }
       li {
         display: inline;
         a {
@@ -26,9 +31,6 @@
           &:hover {
             color: $primary-color;
           }
-        } 
-        .active {
-          color: $bg-color;
         }
       }
     }
