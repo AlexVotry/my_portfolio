@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/my_portfolio/static/css/main.49e44ba2.css",
+    "main.js": "/my_portfolio/static/js/main.b4d6bd82.js",
+    "static/media/alexLogo.png": "/my_portfolio/static/media/alexLogo.40ba9268381d1ad49d1c.png",
+    "static/media/github.svg": "/my_portfolio/static/media/github.73a960c0a9ebbbb669c15db7b6b82fb0.svg",
+    "index.html": "/my_portfolio/index.html",
+    "static/media/playButton.svg": "/my_portfolio/static/media/playButton.191d8cac4345d485da307f3fdf06f98b.svg",
+    "main.49e44ba2.css.map": "/my_portfolio/static/css/main.49e44ba2.css.map",
+    "main.b4d6bd82.js.map": "/my_portfolio/static/js/main.b4d6bd82.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.49e44ba2.css",
+    "static/js/main.b4d6bd82.js"
+  ]
+}
