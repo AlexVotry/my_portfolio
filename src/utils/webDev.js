@@ -27,10 +27,14 @@ export const webDev = () => {
 };
 
 export const createWebDev = () => {
-  const webDev = "WEB*APP*DEVELOPER";
+  const webDev = "SOFTWARE_DEVELOPER";
   
   return webDev.split('').map((letter, index) => {
-    if (letter === '*') return <span key={index} style={{ color: '#fff' }} className='letter'>{letter}</span>
+    if (letter === '_') return (
+      <span key={index} style={{ color: "#FDE9B6" }} className="letter">
+        {letter}
+      </span>
+    );
     
     return (
       <span key={index} className='letter'>{letter}</span>

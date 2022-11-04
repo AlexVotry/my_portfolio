@@ -1,5 +1,5 @@
   .navbar {
-    background-color: $accent-color;
+    background-color: $primary-color;
     min-height: 8vh;
     display: flex;
     justify-content: flex-start;
@@ -24,12 +24,12 @@
       li {
         display: inline;
         a {
-          color: white;
+          color: $accent-color;
           text-align: center;
           padding: 0 16px;
           text-decoration: none;
           &:hover {
-            color: $primary-color;
+            color: $third-color;
           }
         }
       }

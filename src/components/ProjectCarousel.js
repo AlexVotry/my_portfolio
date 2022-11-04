@@ -30,7 +30,7 @@ const ProjectCarousel = () => {
         let titleClass = title.length < 16 ? 'title' : 'title-small';
 
         return (
-          <CloudinaryContext key={image.public_id} cloudName="aleximages">
+          <CloudinaryContext key={image.public_id} cloudName="aleximages" className="cloud-wrapper">
             <div className="projectBlocks">
               <div className={titleClass}>{title}</div>
               <Image className="projectImage" publicId={image.public_id} format="png">

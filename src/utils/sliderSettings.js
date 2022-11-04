@@ -4,11 +4,6 @@ export const sliderSettings = {
   speed: 500,
   slidesToShow: 4,
   slidesToScroll: 1,
-  // beforeChange: (oldIndex, newIndex) => {
-  //   const prevDisabled = newIndex === 0;
-  //   const nextDisabled = newIndex === this.slideCount - 1;
-  //   this.setState({ ...this.state, prevDisabled, nextDisabled });
-  // },
   responsive: [
     {
       breakpoint: 1700,

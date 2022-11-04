@@ -13,6 +13,7 @@ const LinkButtons = (props) => {
 
   const checkForVideoId = (id) => {
     if (id === undefined) return null;
+    // return <PlayButton onClick={() => props.onClick(videoId)} />
     return <button onClick={() => props.onClick(videoId)}><img className="playButton" src={playButton} alt="play button" /></button>
   }
 

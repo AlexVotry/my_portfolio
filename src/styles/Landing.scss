@@ -38,13 +38,15 @@
       background-color: $third-color;
       box-shadow: 3px 3px 10px black;
       max-width: 150px;
-      max-height: 150px;
+      max-height: 155px;
       display: flex;
       flex-direction: column;
-      margin: $spacing-s 3%;
+      justify-content: space-evenly;
+      // margin: $spacing-s 3%;
       .title {
         text-align: center;
         font-weight: bold;
+        color: $dark-color;
       }
       .title-small {
         text-align: center;
@@ -66,7 +68,7 @@
     height: 6vh;
     grid-column: 2 / 13;
     grid-row: 7 / 8;
-    background: $primary-color;
+    background: $bg-color;
     text-align: left;
     padding-left: 4rem;
     box-shadow: 3px 3px 3px #282c34;

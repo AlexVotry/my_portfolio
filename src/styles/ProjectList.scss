@@ -8,7 +8,7 @@
     .projectWrapper {
       margin-top: $spacing-xl;
       display: flex;
-      background-color: $bg-color;
+      background-color: $third-color;
       border-radius: 25px;
       box-shadow: 3px 3px 10px black;
       margin: $spacing-xs;
@@ -25,6 +25,7 @@
             font-size: 1.5em;
             text-decoration: underline;
             text-align: center;
+            color: $bg-color;
             margin: $spacing-xs $spacing-s;
           }
         }
