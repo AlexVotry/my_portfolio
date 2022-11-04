@@ -30,8 +30,6 @@ const ProjectList = () => {
   }, [videoId]);
 
   const renderImages = () => {
-    console.log('images:', gallery);
-    
     return (
       gallery.map(image => {
         return (

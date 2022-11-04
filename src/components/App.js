@@ -1,24 +1,24 @@
-import React, { Component } from 'react';
-import {BrowserRouter, Route} from 'react-router-dom';
+import React from 'react';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Navbar from './Navbar';
 import Landing from './Landing';
 import Videos from './Videos';
 import ProjectList from './ProjectList';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <BrowserRouter>
-          <Navbar />
-          <Route exact path="/videos/:id" component={Videos} />
-          <Route exact path="/list" component={ProjectList} />
-          <Route exact path="/home" component={Landing} />
-          <Route path="/" component={Landing} />
-        </BrowserRouter>
-      </div>
-    );
-  }
+function App () {
+  return (
+    <div className="App">
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/my_portfolio" element={<Landing/>} />
+          <Route path="/home" element={<Landing/>} />
+          <Route path="/videos/:id" element={<Videos/>} />
+          <Route path="/list" element={<ProjectList/>} />
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
 }
 
 export default App;
